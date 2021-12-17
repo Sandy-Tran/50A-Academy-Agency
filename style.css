@@ -1,0 +1,754 @@
+@font-face {
+    font-family: 'Futura-LT';
+    src: url(Assets/Polices/FuturaLT-Book.ttf);
+}
+@font-face {
+    font-family: 'Futura';
+    src: url(Assets/Polices/futur.ttf);
+}
+@font-face {
+    font-family: 'Aurea';
+    src: url(Assets/Polices/AureaUltra_Roman.ttf);
+}
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.header{
+    background-color: #101010;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+.navbar {
+    display: flex;
+    width: 100%;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #FFFFFF;
+}
+.nav-menu {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.nav-item {
+   list-style-type: none;
+   padding: 1.4vw 4vw;
+}
+
+.nav-link{
+    display: inline;
+    font-family: 'Futura';
+    font-size: 1vw;
+    font-weight: bolder;
+    color: #101010;  
+    text-decoration: none;
+
+}
+.nav-link::after{
+    content: "";
+    display: block;
+    position: relative;
+    width: 0%;
+    height: 3px;
+    background: #101010;
+    transition: width 0.2s ease-in-out;
+    /* margin-top: 2px; */
+}
+
+.nav-link:hover::after{
+    width: 100%;
+}
+
+.nav-link:hover{
+    color: #101010;
+}
+
+.nav-logo > img{
+    width: 15vw;
+    height: auto;
+}
+.banner{
+    background: #101010;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    padding: 1vw 0;
+    /* padding: 5vw; */
+}
+.banner h1{
+    font-family: 'Futura';
+    font-size: 4vw;
+    color:#FFFFFF;
+}
+.banner p{
+    font-family: 'Futura-LT';
+    color:#FFFFFF;
+    font-size: 1.5vw;
+}
+
+.block{
+    display: flex;
+    flex-direction: row;
+}
+.block_left{
+    width: 60%;
+    background-color: #EC6633;
+}
+.btn_decouvrir{
+    margin-top: 1vw;
+    margin-right: 2vw;
+}
+.btn_decouvrir a{
+    font-family: 'Futura';
+    float: right;
+    font-size: 1vw;
+    text-decoration: none;
+    color:#FFFFFF;
+    background-color: #101010;
+    padding: 1vw;
+    cursor: pointer;
+    border-radius: 9px;
+}
+.btn_decouvrir a:hover{
+    background-color: #FFFFFF;
+    color: #101010;
+}
+.decouvrir{
+    font-family: 'Aurea';
+    color:#FFFFFF;
+    margin: 7vw 5vw 5vw 5vw;
+    font-size: 1.5vw;
+    line-height: 2.2vw;
+}
+.programme, .objectifs, .intervenants, .public, .financer, .reussite, .philosophie{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 2vw 5vw;
+    font-size: 1.2vw;
+    line-height: 2.2vw;
+}
+.programme h2{
+    width: 100%;
+    font-family: 'Futura';
+    float: left;
+    color:#FFFFFF;
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+}
+.programme p{
+    font-family: 'Futura-LT';
+    color:#FFFFFF;
+    margin-bottom: 1.2vw;
+}
+.dropdown {
+    width : 80%; 
+    background: #FFFFFF;
+    margin : 10px auto;
+    border-radius: 36px; 
+}  
+span{
+    padding : 12px 40px;
+    font-family: 'Futura-LT';
+    background : #FFFFFF; 
+    color :#EC6633;
+    font-size : 1em;
+    font-variant : small-caps;
+    cursor : pointer;
+    display: block;
+    border-radius: 36px; 
+}  
+
+span::after {
+    float: right;
+    right: 10%;
+    content: "+";  
+} 
+.slide, .slide2, .slide3, .slide4, .slide5, .slide6, .slide7{
+    clear:both;
+    width:100%;
+    height:0px;
+    overflow: hidden;
+    text-align: center;
+    transition: height .4s ease;
+}  
+.slide li{
+    font-family: 'Futura-LT';
+    color: #EC6633;
+    padding : 10px; 
+} 
+#touch{
+    position: absolute; 
+    opacity: 0; 
+    height: 0px;
+}      
+#touch:checked + .slide{
+    height: auto;   
+} 
+
+
+
+.slide2 li{
+    font-family: 'Futura-LT';
+    color: #EC6633;
+    padding : 10px;
+} 
+#touch2{
+    position: absolute; 
+    opacity: 0; 
+    height: 0px;
+}     
+#touch2:checked + .slide2{
+    height: auto;
+} 
+
+
+.objectifs h2{
+    width: 100%;
+    font-family: 'Futura';
+    float: left;
+    color:#FFFFFF;
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+}
+.objectifs p{
+    width: 100%;
+    font-family: 'Futura';
+    font-size: 1.3vw;
+    float: left;
+    color:#FFFFFF;
+    margin-bottom: 1vw;
+}
+.objectifs ul{
+    font-family: 'Futura-LT';
+    color:#FFFFFF;
+    margin-top: 1vw;
+    list-style-type: none;
+    font-size: 1.2vw;
+    line-height: 2.2vw;
+}
+.slide3{
+    font-family: 'Futura-LT';
+    color:#EC6633;
+}
+#touch3{
+    position: absolute; 
+    opacity: 0; 
+    height: 0px;
+}     
+#touch3:checked + .slide3{
+    height: auto;
+} 
+.icone{
+    display: flex;
+    flex-direction: row;
+    margin: 2vw;
+}
+.icone img{
+    width: 100px;
+}
+.presentation{
+    display: flex;
+    flex-direction: column;
+    margin: 1.5vw;
+    line-height: 1.5vw;
+    align-items: flex-start;
+}
+.presentation p{
+    text-align: left;
+}
+
+.slide4 li{
+    font-family: 'Futura-LT';
+    color: #EC6633;
+    padding : 8px;
+}
+#touch4{
+    position: absolute; 
+    opacity: 0; 
+    height: 0px;
+}     
+#touch4:checked + .slide4{
+    height: auto;
+} 
+.slide4 h3{
+    font-family: 'Futura-LT';
+    color: #EC6633;
+    margin: 1vw 0;
+}
+.pre-requis{
+    margin: 0 5vw 2vw 5vw;
+    list-style-type: none;
+}
+.slide5 li{
+    font-family: 'Futura-LT';
+    color: #EC6633;
+    padding : 10px;
+}
+.slide5 h3{
+    font-family: 'Futura-LT';
+    color: #EC6633;
+    margin: 1vw 0;
+}
+#touch5{
+    position: absolute; 
+    opacity: 0; 
+    height: 0px;
+}     
+#touch5:checked + .slide5{
+    height: auto;
+} 
+.reussite{
+    margin: 0;
+}
+.reussite h2{
+    width: 100%;
+    font-family: 'Futura';
+    float: left;
+    color:#FFFFFF;
+    font-size: 1.2vw;
+    margin-bottom: 1vw;
+    padding-left: 5vw;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+}
+.content img{
+    width: 50%;
+}
+.avis{
+    background-color: #FFFFFF;
+    width: 50%;
+    list-style-type: none;
+}
+.avis li{
+    font-family: 'Futura-LT';
+    color: #EC6633;
+    padding: 1vw 1.5vw;
+}
+
+
+.satisfaction{
+    font-family: 'Aurea';
+    color:#FFFFFF;
+    margin: 4vw 5vw 4vw 5vw;
+    font-size: 1.5vw;
+    line-height: 2.2vw;
+    text-align: center;
+}
+
+
+#touch7{
+    position: absolute; 
+    opacity: 0; 
+    height: 0px;
+}     
+#touch7:checked + .slide7{
+    height: auto;
+} 
+.slide7 li{
+    font-family: 'Futura-LT';
+    color: #EC6633;
+    padding : 1vw 3vw; 
+} 
+
+
+.block_right{
+    width: 40%;
+}
+
+.devis, .volets{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    margin: 3vw 0;
+    font-size: 1vw;
+    line-height: 2.2vw;
+    
+}
+.devis h2{
+    font-family: 'Futura';
+    font-size: 2.8vw;
+    color: #8651A1;
+}
+.devis a{
+    font-family: 'Futura';
+    margin: 3vw 2vw;
+    text-decoration: none;
+    color: #8651A1;
+    border: #8651A1 2px solid;
+    padding: 0.8vw 4vw; 
+    border-radius: 9px;
+}
+.devis a:hover{
+    background-color: #8651A1;
+    color:#FFFFFF;
+}
+
+.dates h3, .infos h3{
+    font-family: 'Futura';
+    color: #8651A1;
+    font-size: 1.2vw; 
+    margin: 1vw 0; 
+}
+.dates ul , .infos ul{
+    list-style-type: none;
+    font-family: 'Futura-LT';
+    color: #8651A1;
+    margin-left: 2vw;
+}
+.dates ul li, .infos ul li{
+    font-size: 1.2vw;
+}
+.infos{
+    margin-top: 5vw;
+}
+.qualiopi{
+    display:flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-top: 6vw;
+
+}
+.qualiopi img{
+    width: 50%;
+    padding: 0 2vw 0 3vw
+   
+}
+.qualiopi p{
+    font-family: 'Futura';
+    font-size: 1.5vw;
+    color:#8651A1;  
+}
+.volets{
+    background-color: #f3a633af;
+    padding: 3vw 4vw 3vw 4vw
+}
+.volets p{
+    font-family: 'Futura';
+    font-size: 1.2vw;
+    color: #FFFFFF;
+}
+.theorie{
+    width: 100%;
+    padding-top: 3vw;
+}
+.theorie h2{
+    font-family: 'Futura';
+    font-size: 2vw;
+    color: #E01E1C;
+}
+.theorie ul{
+    list-style-type: none;
+    padding-top: 1.5vw;
+}
+.theorie li{
+    font-family: 'Futura';
+    font-size: 1.2vw;
+    color:#FFFFFF;
+}
+.theorie .orange{
+    color: #EC6633;
+}
+.theorie .bleu{
+    color: #41A0D8;
+}
+.definition{
+    text-align: center;
+}
+.definition h2{
+    font-family: 'Futura';
+    font-size: 2.5vw;
+    color:#8651A1;
+    padding-bottom: 4vw;
+}
+.definition a{
+    position: relative;
+    font-family: 'Futura';
+    color: #FFFFFF;
+    font-weight: bold;
+    font-size: 1.5vw;
+    text-decoration: none;
+    padding: 1.5vw 4vw;
+    border-radius: 9px;
+    background: rgb(65,160,216);
+    background: linear-gradient(90deg, rgba(65,160,216,1) 0%, rgba(134,81,161,1) 22%, rgba(224,30,28,1) 50%, rgba(230,182,40,1) 77%, rgba(236,102,51,1) 100%);
+}
+
+.definition a:before {
+    display: none;
+    content: '';
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index: -1;
+    margin: -3px;
+    border-radius: 12px;
+    background: linear-gradient(90deg, rgba(65,160,216,1) 0%, rgba(134,81,161,1) 22%, rgba(224,30,28,1) 50%, rgba(230,182,40,1) 77%, rgba(236,102,51,1) 100%);
+}
+.definition a:hover:before{
+    display: block; 
+}
+.definition a:hover{
+    color: #8651A1;
+    background: #FFFFFF;
+}
+.inbound{
+    text-align: center;
+    margin-top: 8vw;
+    font-family: 'Futura';
+    font-weight: bold;
+    font-size: 1vw;
+    color: #8651A1;
+}
+.inbound img{
+    margin: auto;
+    padding: 2vw;
+    width: 100%;
+}
+.precision{
+    padding: 3vw 4vw 3vw 4vw
+}
+.attirer h2{
+    font-family: 'Futura';
+    color: #8651A1;
+    font-size: 1.2vw;
+}
+.attirer p{
+    font-family: 'Futura-LT';
+    color: #8651A1;
+    font-size: 1.2vw;
+    padding: 1vw 0 2vw 0;
+    line-height: 2vw;
+}
+
+
+.principale{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #101010;
+    padding: 2vw 0;
+   
+}
+.principale .logo50{
+    width: 15vw;
+    padding-left: 3vw;
+}
+
+
+
+.informations{
+    width:30%;
+    margin: none;
+    padding-right: 1.5vw;
+    color:#FFFFFF;
+    font-family: 'Futura-LT';
+   
+}
+.informations ul{
+    list-style-type: none;
+    text-align: right;
+}
+.informations ul li{
+    font-size: 1vw;
+    line-height: 2vw;
+}
+.reseauxsociaux{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-evenly;
+    width:40%;
+    margin: auto;
+    padding-left: 20vw;
+   
+}
+.reseauxsociaux a img{
+    width: 3vw;
+    margin: 1vw;
+}
+
+
+
+
+@media (max-width: 576px) {
+    .block{
+        display: flex;
+        flex-direction: column;
+    }
+    .block_left{
+        width: 100%;
+    }
+    .block_right{
+        width: 100%;
+    }
+    .nav-link{
+        font-size: 1.8vw
+    }
+    .nav-link::after{
+        height: 1px
+    }
+    .nav-logo img{
+        width: 20vw;
+    }
+    .banner{
+        padding: 2vw 0;
+    }
+    .banner h1{
+        font-size: 5vw;
+    }
+    .banner p{
+        font-size: 3vw;
+    }
+    .btn_decouvrir{
+        display: flex;
+        flex-direction: row;
+        justify-content: center; 
+        margin-top: 1.5vw;
+    }
+    .btn_decouvrir a{
+        font-size: 2vw;
+        padding: 2vw 3vw;
+        border-radius: 5px;
+    }
+    .decouvrir p{
+        font-size: 3vw;
+        line-height: 3.2vw;
+    }
+    .programme h2, .objectifs h2, .reussite h2, .theorie h2{
+        font-size: 2.5vw;
+        margin-bottom: 2vw;
+    }
+    .programme p, .reussite p, .volets p{
+        font-size: 2.5vw;
+        line-height: 3vw;
+    }
+    .objectifs p{
+        font-size: 2.7vw;
+    }
+    span{
+        font-size: 2.3vw;
+    }
+    .slide li, .slide2 li, .slide3 li, .slide4 li, .slide5 li, .slide7 li{
+        font-size: 2.3vw;
+    }
+    .objectifs li{
+        font-size: 2.3vw;
+        line-height: 3vw;
+    }
+
+
+    .avis{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: flex-start;
+    }
+    .avis li{
+        font-size: 2.3vw;
+        line-height: 2.5vw;
+        padding: 1vw 3vw;
+    }
+    
+    .satisfaction p{
+        font-size: 3vw;
+        line-height: 3.2vw;
+    }
+    .devis h2{
+        font-size: 4vw;
+    }
+    .devis a{
+        font-size: 2vw;
+        padding: 2vw 3vw;
+        border-radius: 5px;
+    }
+    .dates h3, .infos h3{
+        font-size: 2.5vw;
+    }
+    .dates ul li, .infos ul li{
+        font-size: 2vw;
+        line-height: 3vw;
+    }
+    .dates ul, .infos ul{
+        margin-top: 2vw;
+    }
+    .infos{
+        margin: 0;
+    }
+    .dates_infos{
+        width: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: flex-start;
+        justify-content: space-evenly;
+    }
+    .qualiopi img{
+        width: 40%;
+    }
+    .qualiopi p{
+        font-size: 2.7vw;
+        padding: 3vw;
+    }
+    .volets{
+        text-align: center;  
+    }
+    .theorie ul li{
+        font-size: 2.5vw;
+        line-height: 3.5vw;
+    }
+    .definition h2{
+        font-size: 3.5vw;
+    }
+    .definition a{
+        font-size: 2vw;
+        padding: 2vw 3vw;
+        border-radius: 5px;
+    }
+    .inbound h2{
+        font-size: 2.5vw;
+    }
+    .inbound img{
+        width: 90%;
+    }
+    .attirer{
+        padding: 0 4vw;
+    }
+    .attirer h2{
+        font-size: 2.2vw;
+    }
+    .attirer p{
+        font-size: 2.5vw;
+        line-height: 3vw;
+    }
+    .informations ul li{
+        font-size: 1.5vw;
+        line-height: 3vw;
+    }
+    .reseauxsociaux a img{
+        width: 4vw;
+
+    }   
+}
+
+
+
+
+
